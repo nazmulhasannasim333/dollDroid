@@ -1,4 +1,6 @@
-import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
 const Gallery = () => {
   const images = [
     {
@@ -58,16 +60,23 @@ const Gallery = () => {
       },
      
   ];
+  useEffect(() =>{
+    AOS.init();
+  },[])
 
   return (
-    <div  className="bg-[#0d1422fd] py-20">
+    <div  className="bg-[#0d1422fd] py-20 ">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-extrabold text-white ">Photo Gallery</h2>
       <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((image) => (
           <div
+          data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000"
             key={image.id}
             className="relative overflow-hidden rounded-lg shadow-lg"
+            
           >
             <img
               className="w-full h-96 object-cover"

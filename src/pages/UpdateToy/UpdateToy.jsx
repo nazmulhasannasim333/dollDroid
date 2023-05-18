@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../providers/AuthProvider";
 
-const AddToys = () => {
-  const { user } = useContext(AuthContext);
+const UpdateToy = () => {
+  const loadedDoll = useLoaderData();
+  const {img, name, seller_name, seller_email, rating, _id, quantity, price, details} = loadedDoll;
 
   const {
     register,
@@ -14,25 +15,25 @@ const AddToys = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`http://localhost:5300/toys`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-        if (result.insertedId) {
-          Swal.fire({
+   fetch(`http://localhost:5300/myToys/${_id}`, {
+    method: "PUT",
+    headers: {
+        "content-type": "application/json"
+    },
+    body: JSON.stringify(data)
+   })
+   .then(res => res.json())
+   .then(data => {
+    console.log(data);
+    if(data.modifiedCount > 0){
+        Swal.fire({
             title: "Success!",
-            text: "Your toy has been added successful",
+            text: "Your toy has been updated",
             icon: "success",
             confirmButtonText: "Ok",
           });
-        }
-      });
+    }
+   })
   };
 
   return (
@@ -40,32 +41,13 @@ const AddToys = () => {
       <div className="max-w-6xl lg:mx-auto mx-4 mt-14">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid lg:grid-cols-2 gap-6">
-            <div className="pt-5">
-              <label className="text-white" htmlFor="text">
-                Seller Name
-              </label>
-              <input
-                defaultValue={user && user?.displayName}
-                className="w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
-                {...register("seller_name")}
-              />
-            </div>
-            <div className="pt-5">
-              <label className="text-white" htmlFor="email-address">
-                Seller Email
-              </label>
-              <input
-                defaultValue={user && user?.email}
-                readOnly
-                className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
-                {...register("seller_email")}
-              />
-            </div>
+            
             <div className="pt-5">
               <label className="text-white" htmlFor="text">
                 Toy Name
               </label>
               <input
+              defaultValue={name}
                 className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
                 {...register("name")}
               />
@@ -75,39 +57,19 @@ const AddToys = () => {
                 Toy Photo URL
               </label>
               <input
+              defaultValue={img}
                 className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
                 {...register("img")}
               />
             </div>
             <div className="pt-5">
               <label className="text-white" htmlFor="text">
-                Select Category
-              </label>
-              <select
-                className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
-                {...register("category")}
-              >
-                <option value="Baby dolls">Baby Doll</option>
-                <option value="Barbie">Barbie</option>
-                <option value="American girl">American girl</option>
-              </select>
-            </div>
-            <div className="pt-5">
-              <label className="text-white" htmlFor="text">
                 Price
               </label>
               <input
+              defaultValue={price}
                 className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
                 {...register("price")}
-              />
-            </div>
-            <div className="pt-5">
-              <label className="text-white" htmlFor="text">
-                Rating
-              </label>
-              <input
-                className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
-                {...register("rating")}
               />
             </div>
             <div className="pt-5">
@@ -115,6 +77,7 @@ const AddToys = () => {
                 Quantity
               </label>
               <input
+              defaultValue={quantity}
                 className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
                 {...register("quantity")}
               />
@@ -125,6 +88,7 @@ const AddToys = () => {
               Details
             </label>
             <input
+            defaultValue={details}
               className=" w-full text-black pb-10 lg:pb-20 bg-slate-100 rounded-md focus:outline-none"
               {...register("details")}
             />
@@ -133,7 +97,7 @@ const AddToys = () => {
             type="submit"
             className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            Add Toy
+            Update Toy
           </button>
         </form>
       </div>
@@ -141,4 +105,4 @@ const AddToys = () => {
   );
 };
 
-export default AddToys;
+export default UpdateToy;

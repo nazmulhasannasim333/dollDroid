@@ -1,4 +1,6 @@
-import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 
 
 const testimonials = [
@@ -27,6 +29,10 @@ const testimonials = [
   ];
 
 const Testimonials = () => {
+
+  useEffect(() =>{
+    AOS.init();
+  },[])
     return (
         <>
         <div className="line w-full h-[1px] absolute left-0 opacity-20 md-[6px] bg-[#6b6b6b]"></div> 
@@ -41,10 +47,13 @@ const Testimonials = () => {
             </p>
           </div>
   
-          <div className="mt-14">
+          <div className="mt-14 ">
             <div className="max-w-5xl mx-auto space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
                   key={index}
                   className="bg-slate-700 overflow-hidden shadow rounded-lg divide-y divide-gray-200"
                 >

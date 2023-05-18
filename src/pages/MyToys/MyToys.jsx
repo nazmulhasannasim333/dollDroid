@@ -10,12 +10,15 @@ const MyToys = () => {
     const {user} = useContext(AuthContext);
 
     useEffect(()=> {
-        fetch(`http://localhost:5300/myToys/${user?.email}`)
+        fetch(`http://localhost:5300/myToys?email=${user?.email}`)
         .then(res => res.json())
         .then(data => {
            setMyToys(data);
         })
     },[user])
+    const handleToyUpdate = (data) => {
+        console.log(data);
+    }
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -66,7 +69,7 @@ const MyToys = () => {
             </thead>
             <tbody>
               {myToys.map((toy, i) => (
-                <MyToy key={toy._id} toy={toy} index={i} handleDelete={handleDelete} />
+                <MyToy key={toy._id} toy={toy} index={i} handleDelete={handleDelete} handleToyUpdate={handleToyUpdate} />
               ))}
             </tbody>
           </table>

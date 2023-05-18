@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 
-const MyToy = ({toy, index, handleDelete}) => {
+const MyToy = ({toy, index, handleDelete, handleToyUpdate}) => {
     const {img, name, seller_name, seller_email, category, _id, quantity, price, details} = toy;
     return (
         <tr>
@@ -19,7 +20,7 @@ const MyToy = ({toy, index, handleDelete}) => {
           <span >${price}</span>
         </td>
         <th>
-          <button className="btn btn-ghost btn-xs bg-indigo-600 text-white">update</button>
+        <Link to={`/updateToy/${_id}`}><button className="btn btn-ghost btn-xs bg-indigo-600 text-white">Update</button></Link>
           
         </th>
         <th>
