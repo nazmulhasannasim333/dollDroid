@@ -14,7 +14,7 @@ const CategoryToy = ({categoryToy}) => {
         if(!user){
             Swal.fire({
                 title: 'Please Login!',
-                text: 'Without login, you can not visit this page',
+                text: 'You have to log in first to view details',
                 icon: 'error',
                 confirmButtonText: 'Ok'
               })
