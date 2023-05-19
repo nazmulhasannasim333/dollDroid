@@ -24,18 +24,21 @@ const Blog = () => {
             </div>
             <div tabIndex={2} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
             <div className="collapse-title text-xl font-medium">
-            What is useRef ?
+            What is express js? What is Nest JS ?
             </div>
             <div className="collapse-content"> 
-                <p>useRef is a built-in React hook that accepts one argument as the initial value and returns a reference A reference is an object having a special property current </p>
+                <p>Node JS is JavaScript base framework, and Express JS node JS fremework part. 
+                    <br />
+                    Express is a minimalist and flexible framework that is easy to use and has a large community of developers. NestJS, on the other hand, is a newer framework that provides additional features such as dependency injection, a modular architecture, and an intuitive CLI
+                </p>
             </div>
             </div>
             <div tabIndex={3} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
             <div className="collapse-title text-xl font-medium">
-            What is useMemo ?
+            What is MongoDB aggregate and how does it work ?
             </div>
             <div className="collapse-content"> 
-                <p>The React useMemo Hook returns a memoized value. Think of memoization as caching a value so that it does not need to be recalculated. </p>
+                <p>Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.</p>
             </div>
             </div>
         </div>
