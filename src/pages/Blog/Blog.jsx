@@ -11,7 +11,7 @@ const Blog = () => {
             What is an access token and refresh token? How do they work and where should we store them on the client-side ?
             </div>
             <div className="collapse-content"> 
-                <p>React Context API is a way to manage state globally. It can be used together with the useState Hook to share state between deeply nested components more easily.</p>
+                <p>Acces and refresh token as similer, if access token is expired then refresh token create a new token. we store it in localhost or http only cookie</p>
             </div>
             </div>
             <div tabIndex={1} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
