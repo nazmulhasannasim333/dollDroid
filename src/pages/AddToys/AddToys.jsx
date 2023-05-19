@@ -92,7 +92,7 @@ const AddToys = () => {
               >
                 <option value="Baby dolls">Baby Doll</option>
                 <option value="Barbie">Barbie</option>
-                <option value="American girl">American girl</option>
+                <option value="American girl">American Girl</option>
               </select>
             </div>
             <div className="pt-5">
