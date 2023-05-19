@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="footer text-white p-10 bg-black  ">
+      <footer className="footer text-white p-10 py-24 bg-black  ">
         <div className="lg:ps-32">
           <h2 className="text-4xl font-bold text-indigo-600">DollDroid</h2>
           <p>
@@ -14,9 +14,9 @@ const Footer = () => {
           </p>
           <div className="flex gap-5 items-center">
             <p>Follow Us ---</p>
-            <FaFacebook className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" />
-            <FaTwitter className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" />
-            <FaInstagram className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" />
+            <a href="https://www.facebook.com/nazmulhasannasim333" target="blank"><FaFacebook className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" /></a>
+            <a href="https://twitter.com/NHnasim333" target="blank"><FaTwitter className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" /></a>
+            <a href="https://www.instagram.com/nazmulhasannasim333/" target="blank"><FaInstagram className="h-6 w-6 text-white cursor-pointer hover:text-indigo-500" /></a>
           </div>
         </div>
         <div>
