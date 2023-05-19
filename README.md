@@ -1,13 +1,13 @@
 ## Summery of this project
 
 <p align="center">Live Link : https://doll-droid.web.app/ <p />
-  <h3 align="center"><a href="https://doll-droid.web.app/ ">ChefLegend</a></h3>
+  <h3 align="center"><a href="https://doll-droid.web.app/ ">DollDroid</a></h3>
   
   * Design with react jsx and taiwind css.
   * Design navbar.
   * Design a slider section.
   * Design a photo gallery section.
-  * Design Category section and show data category wise
+  * Design Category section and show data category wise.
   * Category section design and display data from server site by fatch.
   * if user click on view details button then land to details page and show specific toys and toys details.
   * Create a my toys section there is show only my added toys, not show other user added toys.
