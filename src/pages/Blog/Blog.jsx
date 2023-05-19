@@ -1,97 +1,46 @@
-/* eslint-disable react/no-unescaped-entities */
-
-import React from "react";
-import Pdf from "react-to-pdf";
-import useTitle from "../../hooks/useTitle";
+import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const Blog = () => {
-  const ref = React.createRef();
-  useTitle("Blog")
-  return (
-      <div className="max-w-7xl mx-auto z-0">
-        <div className=" my-24 md:mx-32 mx-6">
-          <div ref={ref}>
-            <Pdf targetRef={ref} filename="code-example.pdf">
-              {({ toPdf }) => 
-              <button onClick={toPdf} className="bg-slate-100 lg:mt-0 mt-3 text-black px-6 py-3 mb-5 capitalize font-bold border rounded-md">
-              Download PDF
-            </button>
-              }
-            </Pdf>
-            <div
-              tabIndex={0}
-              className="collapse collapse-plus border border-base-300  rounded-box"
-            >
-              <div className="collapse-title text-xl font-medium">
-                What is the differences between uncontrolled and controlled
-                components ?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  In react JS Controlled components refer to components that
-                  have their state and behavior controlled by the parent
-                  component. These components rely on props passed down from the
-                  parent component to update their state and behavior.
-                  Uncontrolled components refer to components that manage their
-                  own state internally.
-                </p>
-              </div>
+    useTitle("Blog")
+    return (
+        <div className='max-w-7xl mx-auto'>
+          <div className=' my-24 md:mx-32 mx-6'>
+            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+            <div className="collapse-title text-xl font-medium">
+            What is an access token and refresh token? How do they work and where should we store them on the client-side ?
             </div>
-            <div
-              tabIndex={1}
-              className="collapse collapse-plus border border-base-300 rounded-box"
-            >
-              <div className="collapse-title text-xl font-medium">
-                How to validate React props using PropTypes ?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  We validate them by setting the propTypes property of the
-                  component to an object that has the names of the props to
-                  validate as the keys. And the corresponding values are the
-                  data type of the props.
-                </p>
-              </div>
+            <div className="collapse-content"> 
+                <p>React Context API is a way to manage state globally. It can be used together with the useState Hook to share state between deeply nested components more easily.</p>
             </div>
-            <div
-              tabIndex={2}
-              className="collapse collapse-plus border border-base-300 rounded-box"
-            >
-              <div className="collapse-title text-xl font-medium">
-                What is the difference between nodejs and express js ?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  Express is a minimal and flexible node. js web application
-                  framework, providing a robust set of features for building
-                  single and multi-page, and hybrid web applications. On the
-                  other hand, Node. js is detailed as "A platform built on
-                  Chrome's JavaScript runtime for easily building fast, scalable
-                  network applications".{" "}
-                </p>
-              </div>
             </div>
-            <div
-              tabIndex={3}
-              className="collapse collapse-plus border border-base-300  rounded-box"
-            >
-              <div className="collapse-title text-xl font-medium">
-                What is a custom hook, and why will you create a custom hook ?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  React JS Custom hooks are reusable functions that a React JS.
-                  Developer can use to add special and unique functionality to
-                  the React applications. Usually, if there is a requirement to
-                  add a feature, one can install a third-party library and solve
-                  the problem.
-                </p>
-              </div>
+            <div tabIndex={1} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+            <div className="collapse-title text-xl font-medium">
+            What is react customs Hooks ?
             </div>
-          </div>
+            <div className="collapse-content"> 
+                <p>React customs hooks are reusable functions that a React JS software developer can use to add special and unique functionality to the React applications. Usually, if there is a requirement to add a feature, one can install a third-party library and solve the problem</p>
+            </div>
+            </div>
+            <div tabIndex={2} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+            <div className="collapse-title text-xl font-medium">
+            What is useRef ?
+            </div>
+            <div className="collapse-content"> 
+                <p>useRef is a built-in React hook that accepts one argument as the initial value and returns a reference A reference is an object having a special property current </p>
+            </div>
+            </div>
+            <div tabIndex={3} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+            <div className="collapse-title text-xl font-medium">
+            What is useMemo ?
+            </div>
+            <div className="collapse-content"> 
+                <p>The React useMemo Hook returns a memoized value. Think of memoization as caching a value so that it does not need to be recalculated. </p>
+            </div>
+            </div>
         </div>
-      </div>
-  );
+     </div>
+    );
 };
 
 export default Blog;
