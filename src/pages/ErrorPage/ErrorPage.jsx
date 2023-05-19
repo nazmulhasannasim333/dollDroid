@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaRegGrinAlt } from "react-icons/fa";
 import { Link, useRouteError } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ErrorPage = () => {
   const { error, status } = useRouteError()
+  useTitle("Error")
   return (
     <div className='flex items-center p-16 bg-gray-100'>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
