@@ -16,10 +16,10 @@ const Blog = () => {
             </div>
             <div tabIndex={1} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
             <div className="collapse-title text-xl font-medium">
-            What is react customs Hooks ?
+            Compare SQL and NoSQL databases
             </div>
             <div className="collapse-content"> 
-                <p>React customs hooks are reusable functions that a React JS software developer can use to add special and unique functionality to the React applications. Usually, if there is a requirement to add a feature, one can install a third-party library and solve the problem</p>
+                <p>SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON</p>
             </div>
             </div>
             <div tabIndex={2} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
