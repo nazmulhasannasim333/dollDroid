@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../providers/AuthProvider";
 import MyToy from "../MyToy/MyToy";
 
@@ -8,6 +9,7 @@ const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
   const { user } = useContext(AuthContext);
   const [sortOrder, setSortOrder] = useState('');
+  useTitle("My Toys")
 
   useEffect(() => {
     fetch(`http://localhost:5300/myToys?email=${user?.email}&&sort=${sortOrder}`)
