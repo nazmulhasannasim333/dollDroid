@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
@@ -16,6 +17,7 @@ const UpdateToy = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    data.price = parseInt(data.price)
     console.log(data);
    fetch(`http://localhost:5300/myToys/${_id}`, {
     method: "PUT",
@@ -69,6 +71,7 @@ const UpdateToy = () => {
                 Price
               </label>
               <input
+              
               defaultValue={price}
                 className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none"
                 {...register("price")}

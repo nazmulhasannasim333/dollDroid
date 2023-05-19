@@ -24,9 +24,9 @@ const SuccessStory = () => {
             <div className="max-w-5xl mx-auto space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
               <div
                 className="text-white"
-                data-aos="fade-right"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos="flip-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
               >
                 <img
                   className="h-52 w-full rounded-lg mb-5"
@@ -59,9 +59,9 @@ const SuccessStory = () => {
               </div>
               <div
                 className="text-white "
-                data-aos="fade-left"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
               >
                 <img
                   className="h-52 w-full rounded-lg mb-5"

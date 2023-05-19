@@ -66,7 +66,7 @@ const MyToys = () => {
             onChange={handleSortOrderChange}
             className="select select-primary  max-w-xs"
           >
-            <option value="" disabled>Best Match</option>
+            <option  value="" disabled>Best Match</option>
             <option value="lowest">Price(Low to high)</option>
             <option value="highest">Price(High to low)</option>
           </select>

@@ -15,6 +15,7 @@ const AddToys = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    data.price = parseInt(data.price)
     console.log(data);
     fetch(`http://localhost:5300/toys`, {
       method: "POST",
