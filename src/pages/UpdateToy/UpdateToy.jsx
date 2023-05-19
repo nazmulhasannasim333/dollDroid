@@ -2,9 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const UpdateToy = () => {
   const loadedDoll = useLoaderData();
+  useTitle("Update Toy")
   const {img, name, seller_name, seller_email, rating, _id, quantity, price, details} = loadedDoll;
 
   const {
