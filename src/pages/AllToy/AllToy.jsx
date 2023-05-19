@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 
 const AllToy = ({toy, index}) => {
     const {img, name, seller_name, seller_email, category, _id, quantity, price, details} = toy;
+
+
+    
     return (
         <tr>
         <td>{index + 1}</td>

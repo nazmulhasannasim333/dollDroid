@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useNavigation } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 import AllToy from "../AllToy/AllToy";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [seachText, setsearchText] = useState("");
+  const navigation = useNavigation();
   useTitle("All Toys")
 
+
+  console.log(navigation);
+
   useEffect(() => {
-    fetch(`http://localhost:5300/allToys`)
+    fetch(`https://assignment-eleven-server-alpha.vercel.app/allToys`)
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);
@@ -16,7 +21,7 @@ const AllToys = () => {
   }, []);
 
   const handleSearchText = () => {
-    fetch(`http://localhost:5300/getToyBySearch/${seachText}`)
+    fetch(`https://assignment-eleven-server-alpha.vercel.app/getToyBySearch/${seachText}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -29,8 +34,11 @@ const AllToys = () => {
     }
   };
 
+  
+
   return (
     <div className="bg-slate-900 pt-2 pb-14 text-white">
+      
       <div className="max-w-7xl lg:mx-auto mx-4 mt-14">
         <div className="text-center pt-14 pb-8">
           <h3 className="font-semibold text-4xl pb-4">

@@ -8,7 +8,7 @@ const Categories = () => {
   const [selectedTab, setSelectedTab] = useState("Baby dolls");
 
   useEffect(() => {
-    fetch("http://localhost:5300/toys")
+    fetch("https://assignment-eleven-server-alpha.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         setAllCategories(data);

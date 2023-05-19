@@ -19,7 +19,7 @@ const UpdateToy = () => {
   const onSubmit = (data) => {
     data.price = parseInt(data.price)
     console.log(data);
-   fetch(`http://localhost:5300/myToys/${_id}`, {
+   fetch(`https://assignment-eleven-server-alpha.vercel.app/myToys/${_id}`, {
     method: "PUT",
     headers: {
         "content-type": "application/json"

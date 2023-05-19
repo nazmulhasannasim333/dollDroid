@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const MyToy = ({toy, index, handleDelete, handleToyUpdate}) => {
   
-    const {img, name, seller_name, seller_email, category, _id, quantity, price, details} = toy;
-    
+    const {img, name, seller_name, seller_email, category, _id, quantity, price, details, rating} = toy;
+
     return (
         <tr>
         <td>{index + 1}</td>
@@ -14,6 +14,9 @@ const MyToy = ({toy, index, handleDelete, handleToyUpdate}) => {
         </td>
         <td>
           <span className="badge badge-ghost badge-sm">{category}</span>
+        </td>
+        <td>
+          <span className="badge badge-ghost badge-sm">{rating}</span>
         </td>
         <td>
           <span >{quantity}</span>

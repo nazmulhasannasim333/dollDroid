@@ -30,7 +30,7 @@ import PrivateRoute from './PrivateRoute';
         {
           path: "/details/:id",
           element: <Details />,
-          loader: ({params}) => fetch(`http://localhost:5300/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-eleven-server-alpha.vercel.app/toys/${params.id}`)
         },
         {
           path: "/mytoys",
@@ -39,7 +39,7 @@ import PrivateRoute from './PrivateRoute';
         {
           path: "/updateToy/:id",
           element: <UpdateToy />,
-          loader: ({params}) => fetch(`http://localhost:5300/myToys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-eleven-server-alpha.vercel.app/myToys/${params.id}`)
         },
         {
           path: "/alltoys",
@@ -48,7 +48,7 @@ import PrivateRoute from './PrivateRoute';
         {
           path: "/allToyDetails/:id",
           element: <PrivateRoute><AllToyDetails /></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5300/allToys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-eleven-server-alpha.vercel.app/allToys/${params.id}`)
         },
         {
           path: "/addtoys",

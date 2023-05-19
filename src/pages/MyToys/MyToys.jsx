@@ -12,7 +12,7 @@ const MyToys = () => {
   useTitle("My Toys")
 
   useEffect(() => {
-    fetch(`http://localhost:5300/myToys?email=${user?.email}&&sort=${sortOrder}`)
+    fetch(`https://assignment-eleven-server-alpha.vercel.app/myToys?email=${user?.email}&&sort=${sortOrder}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -33,7 +33,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5300/myToys/${id}`, {
+        fetch(`https://assignment-eleven-server-alpha.vercel.app/myToys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -79,6 +79,7 @@ const MyToys = () => {
                 <th>#</th>
                 <th>Toy Name</th>
                 <th>Category</th>
+                <th>Rating</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Update</th>
