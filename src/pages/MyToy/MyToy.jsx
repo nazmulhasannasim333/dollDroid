@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
 const MyToy = ({toy, index, handleDelete, handleToyUpdate}) => {
+  
     const {img, name, seller_name, seller_email, category, _id, quantity, price, details} = toy;
+    
     return (
         <tr>
         <td>{index + 1}</td>

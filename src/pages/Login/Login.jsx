@@ -2,6 +2,7 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
@@ -10,6 +11,7 @@ const Login = () => {
   const [showError, setShowError] = useState("");
   const navigate = useNavigate();
   let location = useLocation();
+  useTitle("login")
 
 
 
