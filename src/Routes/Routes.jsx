@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  createBrowserRouter
+    createBrowserRouter
 } from "react-router-dom";
 import Main from '../Layout/Main';
 import AddToys from '../pages/AddToys/AddToys';

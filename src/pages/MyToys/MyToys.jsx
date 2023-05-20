@@ -18,9 +18,7 @@ const MyToys = () => {
         setMyToys(data);
       });
   }, [user, sortOrder]);
-  const handleToyUpdate = (data) => {
-    console.log(data);
-  };
+
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -93,7 +91,6 @@ const MyToys = () => {
                   toy={toy}
                   index={i}
                   handleDelete={handleDelete}
-                  handleToyUpdate={handleToyUpdate}
                 />
               ))}
             </tbody>

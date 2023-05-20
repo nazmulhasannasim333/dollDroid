@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 import AllToy from "../AllToy/AllToy";
 
 const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [seachText, setsearchText] = useState("");
-  const navigation = useNavigation();
   useTitle("All Toys")
 
 
-  console.log(navigation);
+
 
   useEffect(() => {
     fetch(`https://assignment-eleven-server-alpha.vercel.app/allToys`)
