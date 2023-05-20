@@ -22,10 +22,11 @@ const handleLogout = () => {
       
       className=" max-w-7xl mx-auto"
     >
-      <nav className=" px-20 flex justify-between items-center text-white">
-        <div className="py-5 text-indigo-500 font-extrabold text-4xl">
-          <Link to="/">
-            <span className="text-orange-600">Doll</span>Droid
+      <nav className=" lg:px-20 px-5 flex justify-between items-center text-white">
+        <div className="py-5 text-orange-500 font-extrabold text-4xl">
+          <Link className="flex items-center " to="/">
+            <img className="h-10 w-16" src="https://photo-cdn2.icons8.com/xTahwouZ_2RP5XNdzmBMtCbp-N5QjD8cPXnTu3HPFGg/rs:fit:2223:1072/wm:1:re:0:0:0.65/wmid:moose/q:98/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5h/c3NldHMvYXNzZXRz/L2VkaXRvci9vYmpl/Y3QvMzEyL2JmYzc2/ZTBmLTFmN2QtNDA2/ZS1iODc3LWMzNjVh/ODNmNjg3OC5wbmc.png" alt="" />
+            <span>DollDroid</span>
           </Link>
         </div>
         <div>
@@ -124,7 +125,7 @@ const handleLogout = () => {
         </div>
 
         {/* Mobile Screen */}
-        <div  className="lg:hidden cursor-pointer ml-10 z-50">
+        <div  className="lg:hidden cursor-pointer ml-20 z-50">
           <button
             title={!isMenuOpen ? "Open Menu" : "Close Menu"}
             aria-label={!isMenuOpen ? "Open Menu" : "Close Menu"}

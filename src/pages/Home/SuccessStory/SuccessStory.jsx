@@ -11,17 +11,17 @@ const SuccessStory = () => {
     <>
       <div className="line w-full h-[1px] absolute left-0 opacity-20 md-[6px] bg-[#6b6b6b]"></div>
       <div className="bg-[#0d1422fd] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-indigo-500 font-semibold tracking-wide uppercase">
-              Success story posts
+              Our Latest News
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
               Elements of an Effective Success Story
             </p>
           </div>
           <div className="mt-14">
-            <div className="max-w-5xl mx-auto space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+            <div className=" space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
               <div
                 className="text-white"
                 data-aos="flip-right"

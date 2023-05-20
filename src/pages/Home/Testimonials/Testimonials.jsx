@@ -1,26 +1,28 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 
 
 const testimonials = [
     {
       name: 'Md Nasim Hosen',
-      passion: 'Web Developer',
+      rating: 4.9,
       image: 'https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=1600',
       text:
-        'onsectetur adipiscing elit. Vivamus vel fringilla velit, non convallis nisi. Aliquam erat volutpat. Sed vestibulum ipsum non sapien maximus, in mattis est scelerisque.',
+        'Lnsectetur adipiscing elit. Vivamus vel fringilla velit, non convallis nisi. Aliquam erat volutpat. Sed vestibulum ipsum non sapien maximus, in mattis est scelerisque.',
     },
     {
       name: 'Md Shuvo Islam',
-      passion: 'Graphic Designer',
+      rating: 4.3,
       image: 'https://images.pexels.com/photos/3780030/pexels-photo-3780030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       text:
         'Phasellus vulputate, velit eu pretium iaculis, libero turpis semper sapien, eget lacinia elit nisi vel massa. Etiam ut dolor . Sed vestibulum ipsum non sapien maximus, in mattis est scelerisque.',
     },
     {
       name: 'Md Nahid Khan',
-      passion: 'Video Editor',
+      rating: 4.6,
       image: 'https://images.pexels.com/photos/16669334/pexels-photo-16669334.jpeg?auto=compress&cs=tinysrgb&w=1600',
       text:
         'Phasellus vulputate, velit eu pretium iaculis, libero turpis semper sapien, eget lacinia elit nisi vel massa. Etiam ut dolor ante. Aliquam erat volutpat. Sed vestibulum ipsum non sapien maximus, in mattis est scelerisque.',
@@ -37,7 +39,7 @@ const Testimonials = () => {
         <>
         <div className="line w-full h-[1px] absolute left-0 opacity-20 md-[6px] bg-[#6b6b6b]"></div> 
         <div style={{backgroundColor: "rgb(15 23 42/var(--tw-bg-opacity))"}} className="bg-purple-950 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-indigo-500 font-semibold tracking-wide uppercase">
               Testimonials
@@ -48,7 +50,7 @@ const Testimonials = () => {
           </div>
   
           <div className="mt-14 ">
-            <div className="max-w-5xl mx-auto space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+            <div className=" space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                 data-aos="fade-down"
@@ -70,7 +72,16 @@ const Testimonials = () => {
                         <div className="text-lg font-medium text-white">
                           {testimonial.name}
                         </div>
-                        <div className="text-gray-400">{testimonial.passion}</div>
+                        <div className="text-gray-400">
+                        <Rating
+            className="pe-2"
+            readonly
+            placeholderRating={testimonial.rating}
+            emptySymbol={<FaRegStar className="text-yellow-400 h-4 w-4" />}
+            placeholderSymbol={<FaStar className="text-yellow-400 h-4 w-4" />}
+            fullSymbol={<FaStar className="text-yellow-400 h-4 w-4" />}
+          />
+                        </div>
                       </div>
                     </div>
                     <div className="mt-4">

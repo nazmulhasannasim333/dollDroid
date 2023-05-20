@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Nokia E2102A in-Ear Sport Headphones",
+    "img": "https://image.smythstoys.com/picture/desktop/219116.webp",
+    "desription": "It is started dabbling in wearables,with the latest addition to the list being the Nokia Essential True Wireless Earphones E3511,The Nokia E3511 is a pair of earphones designed in the shape of Apple’s Airpods,with active noise cancellation (ANC),up to 6 5 hours of use time,and offers decent audio quality",
+    "old_price": 685,
+    "percentage": "9%",
+    "new_price": 308,
+    "rating": 3.1,
+    "person": 98
+  },
+  {
+    "title": "Speed Pet - 250ml per pices",
+    "img": "https://image.smythstoys.com/picture/desktop/216655.webp",
+    "desription": "Speed energy drinks are a type of energy drink that is designed to provide an energy boost and improve alertness and mental performance. They typically contain a combination of caffeine, taurine, B vitamins, and other ingredients that are intended to provide a temporary energy boost.",
+    "old_price": 8545,
+    "percentage": "78%",
+    "new_price": 8205,
+    "rating": 4.9,
+    "person": 78
+  },
+  {
+    "title": "HP V194 LED Backlight Monitor - 18.5 Inch - Black ",
+    "img": "https://image.smythstoys.com/picture/desktop/207880.webp",
+    "desription": " connect to your devices with a VGA input. Mount your HP Desktop Mini 2602 directly behind the display for an integrated, affordable workspace that is perfect for small spaces. Or, use the integrated VESA mount to place the display on a wall or stand. Rest assured that your IT investment is supported by a three-year standard limited warranty. To extend your protection, select optional HP Care Packs.",
+    "old_price": 6545,
+    "percentage": "54%",
+    "new_price": 6204,
+    "rating": 2.9,
+    "person": 18
+  },
+  {
+    "title": "LG 22MP400 -B 22 -inch Full HD Monitor - Black",
+    "img": "https://image.smythstoys.com/picture/desktop/207879.webp",
+    "desription": "The LG 22MP400-B comes with AMD FreeSync Enjoy gaming, movies, shows, and videos in Full High Definition. LG 22MP400-B FHD monitors deliver vibrant color performance with a VA display. This monitor has a viewing Angle of 178˚(R/L), and 178˚(U/D). th",
+    "old_price": 6845,
+    "percentage": "18%",
+    "new_price": 6198,
+    "rating": 4.6,
+    "person": 783
+  }
+]

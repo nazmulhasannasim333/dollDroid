@@ -3,7 +3,7 @@ import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../providers/AuthProvider';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const CategoryToy = ({categoryToy}) => {
     const {img, name, price, rating, _id} = categoryToy;
@@ -28,7 +28,7 @@ const CategoryToy = ({categoryToy}) => {
 
     return (
         <div>
-       <div className="relative px-2 lg:px-5 py-5 lg:py-2 rounded-lg text-white bg-[#121231]">
+       <div  style={{height: "530px"}} className=" px-2 lg:px-5 py-5 lg:py-2 shadow-lg rounded-lg text-white bg-slate-800">
       <img className="h-64 w-full rounded-md" src={img} />
       <h4 className="text-xl font-semibold ">{name}</h4>
       <div className=" pt-6 ">

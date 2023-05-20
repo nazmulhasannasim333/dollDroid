@@ -1,12 +1,18 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer text-white p-10 py-24 bg-black  ">
+      <footer className="footer text-white p-10 py-24 bg-black">
         <div className="lg:ps-32">
-          <h2 className="text-4xl font-bold text-indigo-600">DollDroid</h2>
+        <div className="py-5 text-orange-500 font-extrabold text-4xl">
+          <Link className="flex items-center " to="/">
+            <img className="h-10 w-16" src="https://photo-cdn2.icons8.com/xTahwouZ_2RP5XNdzmBMtCbp-N5QjD8cPXnTu3HPFGg/rs:fit:2223:1072/wm:1:re:0:0:0.65/wmid:moose/q:98/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5h/c3NldHMvYXNzZXRz/L2VkaXRvci9vYmpl/Y3QvMzEyL2JmYzc2/ZTBmLTFmN2QtNDA2/ZS1iODc3LWMzNjVh/ODNmNjg3OC5wbmc.png" alt="" />
+            <span>DollDroid</span>
+          </Link>
+        </div>
           <p>
             DollDroid Industries Ltd.
             <br />
@@ -21,10 +27,10 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Company</span>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
           <a className="link link-hover">Products</a>
-          <a className="link link-hover">Toys</a>
+          <Link to="/allToys" className="link link-hover">All Toys</Link>
+          <Link to="/myToys" className="link link-hover">My Toys</Link>
+          <Link to="/blog" className="link link-hover">Blog</Link>
         </div>
         <div>
           <span className="footer-title">Legal</span>
@@ -44,7 +50,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered w-full pr-16"
+                className="input input-bordered w-full pr-16 text-slate-700"
               />
               <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
                 Subscribe
