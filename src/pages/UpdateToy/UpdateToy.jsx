@@ -17,7 +17,7 @@ const UpdateToy = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    data.price = parseInt(data.price)
+    data.price = parseFloat(data.price)
     console.log(data);
    fetch(`https://assignment-eleven-server-alpha.vercel.app/myToys/${_id}`, {
     method: "PUT",
